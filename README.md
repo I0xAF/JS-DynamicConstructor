@@ -9,4 +9,4 @@ npm install
 
 ## Todo:
 
-- [ ] 'Event Listener' in options
+- [x] 'Event Listener' in options
