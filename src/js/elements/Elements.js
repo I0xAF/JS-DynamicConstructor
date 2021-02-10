@@ -28,6 +28,7 @@ export class TextElement extends Element{
 export class FormInputElement extends Element{
   constructor(options){
     super('field', '', options, 'input')
+    //Не закрываем тэг при построении ( Refactor )
     this.options.closing = false
   }
 }

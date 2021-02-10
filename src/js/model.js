@@ -36,9 +36,12 @@ export const model = [
   {
     tag: 'form',
     events:{
-      'submit': (event) => {
+      'submit': function (event) {
         event.preventDefault();
-        console.log(event);
+        //this.self -> self element (form)
+        //this.site -> $el
+        //this.site.$el.querySelector(`#el [h-id=${this.self.options.$hID}]`)
+        console.log(this);
       }
     }
   })

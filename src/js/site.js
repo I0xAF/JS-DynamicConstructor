@@ -12,7 +12,7 @@ export class Site{
   #renderElement(element, node = this.$el){
     node.insertAdjacentHTML('beforeend', element.toHtml())
     const added = this.#getElementByHID(element.options.$hID)
-    this.#setEvents(element.options.events, added)
+    this.#setEvents(element, added)
     if(element.type === 'block'){
       this.renderBlock(this.#getElementByHID(element.options.$hID), element)
     }
@@ -20,7 +20,11 @@ export class Site{
   #getElementByHID(hid){
     return this.$el.querySelector(`#el [h-id="${hid}"]`)
   }
-  #setEvents(events, node){
-    if(events) Object.keys(events).forEach(eKey => node.addEventListener(eKey, events[eKey]))
+  #setEvents(element, node){
+    const events = element.options.events
+    if(events) Object.keys(events).forEach(eKey => node.addEventListener(eKey, events[eKey].bind({
+      site: this,
+      self: element
+    })))
   }
 }
