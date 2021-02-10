@@ -1,2 +1,8 @@
 # JS-DynamicConstructor
-Dynamic constructor
+Dynamic site constructor | Parcel
+
+## Installation:
+
+```
+npm install
+```
