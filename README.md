@@ -1,4 +1,4 @@
-# JS-DynamicConstructor
+# JS | Dynamic constructor
 Dynamic site constructor | Parcel
 
 ## Installation:
