@@ -1,2 +1,8 @@
 # JS-DynamicConstructor
-Dynamic constructor
+Dynamic site constructor
+
+## Installation:
+
+```
+npm install
+```
