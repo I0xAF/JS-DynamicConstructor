@@ -6,3 +6,7 @@ Dynamic site constructor | Parcel
 ```
 npm install
 ```
+
+## Todo:
+
+- [ ] 'Event Listener' in options
