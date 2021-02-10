@@ -1,0 +1,2 @@
+# JS-DynamicConstructor
+Dynamic constructor
