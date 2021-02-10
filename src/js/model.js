@@ -35,5 +35,11 @@ export const model = [
   ], 
   {
     tag: 'form',
+    events:{
+      'submit': (event) => {
+        event.preventDefault();
+        console.log(event);
+      }
+    }
   })
 ]
