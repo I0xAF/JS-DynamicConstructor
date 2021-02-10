@@ -1,5 +1,5 @@
 # JS-DynamicConstructor
-Dynamic site constructor
+Dynamic site constructor | Parcel
 
 ## Installation:
 
