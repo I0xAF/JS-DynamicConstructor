@@ -2,7 +2,7 @@ import { HTML } from './base/HTML'
 import { $Builder } from '../_builder'
 
 export class Element extends HTML{
-  constructor(type, value, options, defaultTag = 'div'){
+  constructor(type = null, value = null, options = {}, defaultTag = 'div'){
     super(options)
     this.type = type
     this.value = value

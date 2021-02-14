@@ -12,6 +12,7 @@ export class Site{
   #renderElement(element, node = this.$el){
     node.insertAdjacentHTML('beforeend', element.toHtml())
     const added = this.#getElementByHID(element.options.$hID)
+    element.node = added
     this.#setEvents(element, added)
     if( element.type === 'block' ) this.renderBlock(added, element)
   }
