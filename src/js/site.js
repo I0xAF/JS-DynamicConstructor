@@ -13,9 +13,7 @@ export class Site{
     node.insertAdjacentHTML('beforeend', element.toHtml())
     const added = this.#getElementByHID(element.options.$hID)
     this.#setEvents(element, added)
-    if(element.type === 'block'){
-      this.renderBlock(this.#getElementByHID(element.options.$hID), element)
-    }
+    if( element.type === 'block' ) this.renderBlock(added, element)
   }
   #getElementByHID(hid){
     return this.$el.querySelector(`#el [h-id="${hid}"]`)

@@ -1,5 +1,5 @@
 export function css(styles = {}){
-  return keysToString(styles, key => `${key}: ${styles[key]}`, ';')
+  return keysToString(styles, key => `${key}: ${styles[key]}`, ';') + ';'
 }
 export function classes(classes = []){
   return keysToString(classes, c => new String(c), ' ')

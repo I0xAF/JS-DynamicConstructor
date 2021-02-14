@@ -2,17 +2,6 @@ import { TextElement, TitleElement, FormInputElement, FormButtonElement } from '
 import { Block } from './elements/Block'
 
 export const model = [
-  new Block([
-    new TextElement('Test', {
-      styles: {
-        color: 'green'
-      }
-    }),
-    new TextElement('Test2', {}),
-    new Block([
-      new TextElement('Test3', {})
-    ])
-  ]),
   new TitleElement('Some Title', {
     styles: {
       color: 'red',
@@ -23,6 +12,38 @@ export const model = [
     styles: {
       'text-align': 'center',
       color: '#3e3e3e'
+    }
+  }),
+  new Block([
+    new TextElement('Text A', {
+      styles: {
+        'text-align': 'center',
+        color: '#3e3e3e'
+      }
+    }),
+    new TextElement('Text B', {
+      styles: {
+        'text-align': 'center',
+        color: '#3e3e3e'
+      }
+    }),
+    new Block([
+      new Block([
+        new Block([
+          new TextElement('Text A', {
+            styles: {
+              'text-align': 'center',
+              color: '#3e3e3e'
+            }
+          }),
+          new Block()
+        ])
+      ])
+    ])
+  ], {
+    styles: {
+      display: 'flex',
+      'justify-content': 'space-between',
     }
   }),
   new Block([
@@ -38,9 +59,6 @@ export const model = [
     events:{
       'submit': function (event) {
         event.preventDefault();
-        //this.self -> self element (form)
-        //this.site -> $el
-        //this.site.$el.querySelector(`#el [h-id=${this.self.options.$hID}]`)
         console.log(this);
       }
     }
