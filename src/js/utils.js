@@ -2,7 +2,8 @@ export function css(styles = {}){
   return keysToString(styles, key => `${key}: ${styles[key]}`, ';') + ';'
 }
 export function classes(classes = []){
-  return keysToString(classes, c => new String(c), ' ')
+  if(typeof classes === 'string') return classes
+  return classes.join(' ')
 }
 export function attributes(attributes = []){
   return keysToString(attributes, attr => `${attr}="${attributes[attr]}"`, ' ')
