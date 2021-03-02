@@ -1,5 +1,6 @@
 export class Site{
   constructor(selector){
+    this.$selector = selector
     this.$el = document.querySelector(selector)
   }
   render(model){
@@ -17,7 +18,7 @@ export class Site{
     if( element.type === 'block' ) this.renderBlock(added, element)
   }
   #getElementByHID(hid){
-    return this.$el.querySelector(`#el [h-id="${hid}"]`)
+    return this.$el.querySelector(`${this.$selector} [h-id="${hid}"]`)
   }
   #setEvents(element, node){
     const events = element.options.events
