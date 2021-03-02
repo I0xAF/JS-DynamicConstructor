@@ -12,8 +12,7 @@ export function attributes(attributes = []){
 export function makeID(length) {
   let result             = ''
   const characters       = 'abcdefghijklmnopqrstuvwxyz0123456789' //ABCDEFGHIJKLMNOPQRSTUVWXYZ
-  for (let i = 0; i < length; i++)
-     result += characters.charAt(Math.floor(Math.random() * characters.length))
+  for (let i = 0; i < length; i++) result += characters.charAt(Math.floor(Math.random() * characters.length))
   return result
 }
 
